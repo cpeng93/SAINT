@@ -1,7 +1,19 @@
 # SAINT: Spatially Aware Interpolation NeTwork for Medical Slice Synthesis
 
+
+![](vis.png)
+
 This is the code for SAINT: Spatially Aware Interpolation NeTwork for Medical Slice Synthesis (CVPR2020). 
 
+```
+@InProceedings{Peng_SAINT_CVPR2020,
+  author = {Peng, Cheng and Lin, Wei-An and Liao, Haofu and Chellappa, Rama and Zhou, S. Kevin},
+  title = {SAINT: Spatially Aware Interpolation NeTwork for Medical Slice Synthesis},
+  booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month = {June},
+  year = {2020}
+}
+```
 
 [Paper](https://arxiv.org/abs/2001.00704)
 
