@@ -20,14 +20,14 @@ This is the code for SAINT: Spatially Aware Interpolation NeTwork for Medical Sl
 The framework of this codebase is derived from [EDSR-PyTorch](https://github.com/sanghyun-son/EDSR-PyTorch).
 
 
-##Setup:
+## Setup:
 
     conda create --name SAINT python=3.7
     conda activate SAINT
     pip install https://download.pytorch.org/whl/cpu/torch-1.0.0-cp37-cp37m-linux_x86_64.whl
     pip install tqdm imageio medpy scikit-image
 
-##Data Preparation:
+## Data Preparation:
 
 Data is obtained from the [Medical Decathlon Challenge (MSD)](http://medicaldecathlon.com/), specifically from the [Liver](https://drive.google.com/file/d/1jyVGUGyxKBXV6_9ivuZapQS8eUJXCIpu/view), [Colon](https://drive.google.com/file/d/1m7tMpE9qEcQGQjL_BdMD-Mvgmc44hG1Y/view), and [Hepatic Vessel](https://drive.google.com/file/d/1qVrpV7vmhIsUxFiH189LmAn0ALbAPrgS/view) dataset. After obtaining the files, run the following command to obtain the processed data. 
 
@@ -35,7 +35,7 @@ Data is obtained from the [Medical Decathlon Challenge (MSD)](http://medicaldeca
 
 Volumes with metal artifacts are removed, the intensity is clipped within a 4000 min-max range. Slices in Saggital and Coronal views are generated in TRAIN_SLICES for training. Volumes are saved in TRAIN_VOL and TEST, based on what is used as our test set in test_set.pt. 
 
-##Evaluation:
+## Evaluation:
 
 You can try SAINT with our pre-trained checkpoint by running the following command:
 
@@ -45,7 +45,7 @@ This evaluates SR results based on X4 upsampling rate. Alternatively, change sca
 
 To only evaluate the results from the first stage (MSR), change the "stage" flag to 1 instead. 
 
-##Training:
+## Training:
 ### Marginal Super Resolution
 
 Based on our data preparation, training can be done with the following command:
@@ -70,7 +70,7 @@ Note that:
   * Use the average of Saggital and Coronal volume, which is a reasonable estimate that is about 0.2 dB worse than RFN based on our experiments. 
 
 
-###TODO
+### TODO
 * Training for RFN will be updated with more details. 
 
 
